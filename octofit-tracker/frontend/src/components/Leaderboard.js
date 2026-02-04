@@ -55,11 +55,17 @@ function Leaderboard() {
         <tbody>
           {leaderboard.map((entry) => (
             <tr key={entry._id}>
-              <td><strong>{entry.rank}</strong></td>
-              <td>{entry.user_name}</td>
-              <td>{entry.team_name}</td>
-              <td>{entry.total_calories}</td>
-              <td>{entry.total_activities}</td>
+              <td>
+                <span className="badge bg-warning text-dark">{entry.rank}</span>
+              </td>
+              <td><strong>{entry.user_name || 'N/A'}</strong></td>
+              <td>
+                <span className={`badge ${entry.team_name === 'Team Marvel' ? 'bg-danger' : 'bg-primary'}`}>
+                  {entry.team_name || 'N/A'}
+                </span>
+              </td>
+              <td><strong>{(entry.total_calories || 0).toLocaleString()}</strong> kcal</td>
+              <td>{entry.total_activities || 0}</td>
             </tr>
           ))}
         </tbody>
