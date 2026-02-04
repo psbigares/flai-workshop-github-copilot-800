@@ -61,7 +61,10 @@ function Workouts() {
                 <div className="d-flex justify-content-between align-items-center">
                   <div>
                     <p className="mb-1"><strong>⏱️ Duration:</strong> {workout.duration || 0} min</p>
-                    <p className="mb-0"><strong>🔥 Calories:</strong> {workout.calories_per_session || 0} kcal</p>
+                    <p className="mb-1"><strong>🔥 Calories:</strong> {workout.calories_per_session || 0} kcal</p>
+                    <p className="mb-0 text-muted small">
+                      <strong>📅 Created:</strong> {workout.created_at ? new Date(workout.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) : 'N/A'}
+                    </p>
                   </div>
                 </div>
               </div>
