@@ -49,7 +49,14 @@ function Teams() {
               <div className="card-body">
                 <h5 className="card-title">{team.name}</h5>
                 <p className="card-text">{team.description}</p>
-                <p className="text-muted">Created: {new Date(team.created_at).toLocaleDateString()}</p>
+                <div className="d-flex justify-content-between align-items-center mt-3">
+                  <span className="badge bg-primary rounded-pill">
+                    {team.member_count || 0} Members
+                  </span>
+                  <small className="text-muted">
+                    Created: {new Date(team.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                  </small>
+                </div>
               </div>
             </div>
           </div>
