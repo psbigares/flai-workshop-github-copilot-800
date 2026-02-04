@@ -45,17 +45,25 @@ function Workouts() {
       <div className="row">
         {workouts.map((workout) => (
           <div key={workout._id} className="col-md-6 mb-4">
-            <div className="card">
+            <div className="card h-100">
               <div className="card-body">
-                <h5 className="card-title">{workout.name}</h5>
-                <p className="card-text">{workout.description}</p>
-                <div className="d-flex justify-content-between">
-                  <span className="badge bg-primary">{workout.category}</span>
-                  <span className="badge bg-secondary">{workout.difficulty}</span>
+                <h5 className="card-title">{workout.name || 'Unnamed Workout'}</h5>
+                <p className="card-text">{workout.description || 'No description available'}</p>
+                <div className="d-flex gap-2 mb-3">
+                  <span className="badge bg-primary">{workout.category || 'N/A'}</span>
+                  <span className={`badge ${
+                    workout.difficulty === 'Beginner' ? 'bg-success' :
+                    workout.difficulty === 'Intermediate' ? 'bg-warning text-dark' :
+                    workout.difficulty === 'Advanced' ? 'bg-danger' : 'bg-secondary'
+                  }`}>{workout.difficulty || 'N/A'}</span>
                 </div>
                 <hr />
-                <p><strong>Duration:</strong> {workout.duration} minutes</p>
-                <p><strong>Calories:</strong> {workout.calories_per_session} per session</p>
+                <div className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <p className="mb-1"><strong>⏱️ Duration:</strong> {workout.duration || 0} min</p>
+                    <p className="mb-0"><strong>🔥 Calories:</strong> {workout.calories_per_session || 0} kcal</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
