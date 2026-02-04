@@ -5,7 +5,7 @@ from .models import User, Team, Activity, Leaderboard, Workout
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['_id', 'name', 'email', 'password', 'team_id', 'created_at']
+        fields = ['_id', 'name', 'username', 'email', 'password', 'team_id', 'created_at']
         extra_kwargs = {'password': {'write_only': True}}
 
 

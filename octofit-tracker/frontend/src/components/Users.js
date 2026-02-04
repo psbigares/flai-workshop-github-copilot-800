@@ -46,6 +46,7 @@ function Users() {
         <thead>
           <tr>
             <th>Name</th>
+            <th>Username</th>
             <th>Email</th>
             <th>Team ID</th>
             <th>Created At</th>
@@ -55,6 +56,7 @@ function Users() {
           {users.map((user) => (
             <tr key={user._id}>
               <td>{user.name}</td>
+              <td>@{user.username}</td>
               <td>{user.email}</td>
               <td>{user.team_id}</td>
               <td>{new Date(user.created_at).toLocaleDateString()}</td>

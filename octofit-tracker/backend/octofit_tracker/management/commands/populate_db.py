@@ -35,30 +35,35 @@ class Command(BaseCommand):
         marvel_users = [
             User.objects.create(
                 name='Iron Man',
+                username='ironman',
                 email='tony.stark@marvel.com',
                 password='arc_reactor_3000',
                 team_id=str(team_marvel._id)
             ),
             User.objects.create(
                 name='Captain America',
+                username='captainamerica',
                 email='steve.rogers@marvel.com',
                 password='shield_bearer',
                 team_id=str(team_marvel._id)
             ),
             User.objects.create(
                 name='Thor',
+                username='thor',
                 email='thor.odinson@marvel.com',
                 password='mjolnir_worthy',
                 team_id=str(team_marvel._id)
             ),
             User.objects.create(
                 name='Black Widow',
+                username='blackwidow',
                 email='natasha.romanoff@marvel.com',
                 password='red_room_grad',
                 team_id=str(team_marvel._id)
             ),
             User.objects.create(
                 name='Hulk',
+                username='hulk',
                 email='bruce.banner@marvel.com',
                 password='gamma_radiation',
                 team_id=str(team_marvel._id)
@@ -70,30 +75,35 @@ class Command(BaseCommand):
         dc_users = [
             User.objects.create(
                 name='Superman',
+                username='superman',
                 email='clark.kent@dc.com',
                 password='krypton_survivor',
                 team_id=str(team_dc._id)
             ),
             User.objects.create(
                 name='Batman',
+                username='batman',
                 email='bruce.wayne@dc.com',
                 password='dark_knight',
                 team_id=str(team_dc._id)
             ),
             User.objects.create(
                 name='Wonder Woman',
+                username='wonderwoman',
                 email='diana.prince@dc.com',
                 password='amazonian_warrior',
                 team_id=str(team_dc._id)
             ),
             User.objects.create(
                 name='The Flash',
+                username='flash',
                 email='barry.allen@dc.com',
                 password='speed_force',
                 team_id=str(team_dc._id)
             ),
             User.objects.create(
                 name='Aquaman',
+                username='aquaman',
                 email='arthur.curry@dc.com',
                 password='king_of_atlantis',
                 team_id=str(team_dc._id)
