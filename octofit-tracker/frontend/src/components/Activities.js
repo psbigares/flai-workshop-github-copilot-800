@@ -53,15 +53,22 @@ function Activities() {
           </tr>
         </thead>
         <tbody>
-          {activities.map((activity) => (
-            <tr key={activity._id}>
-              <td>{activity.activity_type}</td>
-              <td>{activity.duration}</td>
-              <td>{activity.calories_burned}</td>
-              <td>{activity.distance || 'N/A'}</td>
-              <td>{new Date(activity.date).toLocaleDateString()}</td>
-            </tr>
-          ))}
+          {activities.map((activity) => {
+            const activityDate = activity.date ? new Date(activity.date) : null;
+            const formattedDate = activityDate && !isNaN(activityDate.getTime()) 
+              ? activityDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
+              : 'N/A';
+            
+            return (
+              <tr key={activity._id}>
+                <td>{activity.activity_type}</td>
+                <td>{activity.duration}</td>
+                <td>{activity.calories_burned}</td>
+                <td>{activity.distance || 'N/A'}</td>
+                <td>{formattedDate}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
