@@ -64,6 +64,70 @@ function App() {
                   <Link to="/workouts" className="btn btn-outline-primary btn-lg">Browse Workouts</Link>
                 </div>
               </div>
+              
+              <div className="row mt-5">
+                <div className="col-md-4 mb-4">
+                  <Link to="/users" className="text-decoration-none">
+                    <div className="card h-100 hover-card">
+                      <div className="card-body text-center">
+                        <div className="display-3 mb-3">👥</div>
+                        <h5 className="card-title">Users</h5>
+                        <p className="card-text">View all registered superhero members and their profiles</p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+                
+                <div className="col-md-4 mb-4">
+                  <Link to="/activities" className="text-decoration-none">
+                    <div className="card h-100 hover-card">
+                      <div className="card-body text-center">
+                        <div className="display-3 mb-3">🏃‍♂️</div>
+                        <h5 className="card-title">Activities</h5>
+                        <p className="card-text">Track all fitness activities and workout sessions</p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+                
+                <div className="col-md-4 mb-4">
+                  <Link to="/leaderboard" className="text-decoration-none">
+                    <div className="card h-100 hover-card">
+                      <div className="card-body text-center">
+                        <div className="display-3 mb-3">🏆</div>
+                        <h5 className="card-title">Leaderboard</h5>
+                        <p className="card-text">See the top performers ranked by calories burned</p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              
+              <div className="row">
+                <div className="col-md-6 mb-4">
+                  <Link to="/teams" className="text-decoration-none">
+                    <div className="card h-100 hover-card">
+                      <div className="card-body text-center">
+                        <div className="display-3 mb-3">🦸‍♂️</div>
+                        <h5 className="card-title">Teams</h5>
+                        <p className="card-text">Join Team Marvel or Team DC and compete together</p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+                
+                <div className="col-md-6 mb-4">
+                  <Link to="/workouts" className="text-decoration-none">
+                    <div className="card h-100 hover-card">
+                      <div className="card-body text-center">
+                        <div className="display-3 mb-3">💪</div>
+                        <h5 className="card-title">Workouts</h5>
+                        <p className="card-text">Browse superhero-inspired workout routines</p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
             </div>
           } />
           <Route path="/activities" element={<Activities />} />

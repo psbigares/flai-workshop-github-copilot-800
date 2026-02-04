@@ -102,6 +102,26 @@ h1, h2, h3 {
   margin-bottom: 2rem;
 }
 
+.hover-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.hover-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-color: #667eea;
+}
+
+.hover-card .card-body {
+  color: #333;
+}
+
+.text-decoration-none:hover {
+  text-decoration: none !important;
+}
+
 .loading, .error {
   text-align: center;
   padding: 3rem;
